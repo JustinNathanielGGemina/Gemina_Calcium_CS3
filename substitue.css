@@ -1,0 +1,144 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation Styling */
+header {
+    background-color: #005f99;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: white;
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 90vh;
+    background: url('water-hero.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.cta-button {
+    background-color: #00bfff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Section Styling */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.stat-boxes {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.stat-box {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.stat-box h3 {
+    font-size: 2em;
+    color: #005f99;
+}
+
+/* Get Involved Button */
+.cta-button:hover {
+    background-color: #007acc;
+}
+
+/* Contact Form Styling */
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-section input, .contact-section textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #005f99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #007acc;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #005f99;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
