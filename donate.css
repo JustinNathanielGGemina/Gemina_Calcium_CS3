@@ -1,0 +1,148 @@
+/* donate.css */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* General Body Styling */
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Donate Button Styling */
+.donate-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    background: #28a745;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    background-image: url('sprite.png');
+    background-position: 0 0; /* Position for donate icon */
+    background-repeat: no-repeat;
+    padding-left: 45px; /* Space for icon */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: move-icon 1s infinite linear; /* Animation using sprite */
+}
+
+/* Hover and Active States */
+.donate-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.donate-button:active {
+    background-color: #1e7e34;
+}
+
+.donate-button:focus {
+    outline: 2px solid #ff9800;
+    outline-offset: 2px;
+}
+
+/* Animation for Sprite */
+@keyframes move-icon {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 -32px; /* Change the position to show a different part of sprite */
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Form Styling */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: url('sprite.png');
+    background-position: 0 -64px; /* Position for submit icon */
+    background-repeat: no-repeat;
+    padding-left: 45px; /* Space for icon */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: move-submit-icon 1s infinite linear;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background: #004085;
+}
+
+.submit-button:focus {
+    outline: 2px solid #ff9800;
+}
+
+/* Animation for Submit Icon */
+@keyframes move-submit-icon {
+    0% {
+        background-position: 0 -64px;
+    }
+    50% {
+        background-position: 0 -96px;
+    }
+    100% {
+        background-position: 0 -64px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donate-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .submit-button {
+        padding: 0.7rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+}

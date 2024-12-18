@@ -1,75 +1,120 @@
+/* money.css */
+
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
+/* General Body Styling */
 body {
     line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-header {
-    background: #1e90ff;
-    padding: 10px 20px;
+/* Section Styling */
+.section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.nav-links {
-    list-style-type: none;
+/* Stat Box Container */
+.stat-boxes {
     display: flex;
     justify-content: space-around;
+    padding: 2rem 0;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
+/* Individual Stat Box */
+.stat-box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    background-image: url('sprite.png');
+    background-repeat: no-repeat;
+    padding-left: 45px; /* Space for icon */
 }
 
-.logo {
-    font-size: 1.5em;
+/* Stat Value */
+.stat-box .stat-value {
+    font-size: 3rem;
+    color: #28a745;
     font-weight: bold;
-    color: white;
+    animation: move-money-icon 1s infinite linear;
 }
 
-.hero {
-    height: 90vh;
-    background: url('clean-water.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+/* Negative Stat Value */
+.stat-box .stat-value-negative {
+    font-size: 3rem;
+    color: #dc3545;
+    font-weight: bold;
+    padding-left: 45px; /* Space for negative icon */
+    background-image: url('sprite.png');
+    background-position: 0 -32px; /* Position for negative icon */
+    background-repeat: no-repeat;
+    animation: move-negative-icon 1s infinite linear;
 }
 
-.hero-content h1 {
-    font-size: 3em;
+/* Stat Box Hover and Focus States */
+.stat-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.cta-button {
-    background: #00bfff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin-top: 20px;
-    display: inline-block;
+.stat-box:focus {
+    outline: 2px solid #ff9800;
 }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
+/* Stat Description */
+.stat-box .stat-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 1rem;
 }
 
-footer {
-    background: #1e90ff;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+/* Animation for Money Icon */
+@keyframes move-money-icon {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 -32px;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 
-.social-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+/* Animation for Negative Icon */
+@keyframes move-negative-icon {
+    0% {
+        background-position: 0 -32px;
+    }
+    50% {
+        background-position: 0 -64px;
+    }
+    100% {
+        background-position: 0 -32px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stat-box {
+        width: 45%;
+        margin-bottom: 1.5rem;
+    }
+
+    .stat-box .stat-value, .stat-box .stat-description {
+        font-size: 2rem;
+    }
 }
